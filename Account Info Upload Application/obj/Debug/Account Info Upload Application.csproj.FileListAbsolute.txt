@@ -1,0 +1,9 @@
+c:\users\william\documents\visual studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\bin\Debug\Account Info Upload Application.exe.config
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\bin\Debug\Account Info Upload Application.exe
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\bin\Debug\Account Info Upload Application.pdb
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\obj\Debug\Account Info Upload Application.csprojResolveAssemblyReference.cache
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\obj\Debug\Account_Info_Upload_Application.Properties.Resources.resources
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\obj\Debug\Account Info Upload Application.csproj.GenerateResource.Cache
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\obj\Debug\Account Info Upload Application.exe
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\obj\Debug\Account Info Upload Application.pdb
+C:\Users\William\Documents\Visual Studio 2013\Projects\Account Info Upload Application\Account Info Upload Application\obj\Debug\Account_Info_Upload_Application.MainForm.resources
