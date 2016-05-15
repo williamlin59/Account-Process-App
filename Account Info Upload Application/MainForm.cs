@@ -26,6 +26,8 @@ namespace Account_Info_Upload_Application
         private const String UNABLE_OPEN_FILE = "Unable to open file: ";
         private const String COMPLETE = "Complete";
         private const String UNABLE_CONNECT_DB = "Can't connect to database";
+        private const String READ_IN_LINE = "Total Read in : ";
+        private const String INVALIDE_LINE = "Total Invalid Line : ";
         private List<Transaction> transactions;
         public MainForm()
         {
@@ -80,7 +82,7 @@ namespace Account_Info_Upload_Application
         {
             this.task.Text = COMPLETE;
             int line = FileReader.getLine();
-            MessageBox.Show("Total Read in : "+line+"\n"+ "Total Invalid Line : " +(line-transactions.Count));
+            MessageBox.Show(READ_IN_LINE + line + "\n" + INVALIDE_LINE + (line - transactions.Count));
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
