@@ -9,3 +9,5 @@ process. Essential error handlings are also implemented for opening file, readin
 
 To run this app. A Microsoft sql server is necessary. Publish the script to the server and import the main project to visual studio.
 straight run it.
+
+This app mainly built upon by Dbconnecter.cs , MainForm.cs ,MainForm(Design).cs ,Reader.cs and Transaction.cs
