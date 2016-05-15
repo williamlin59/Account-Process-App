@@ -2,6 +2,12 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Globalization;
+/* FileReader is in charge of reading in data from file and store them in a list of transaction object
+ * for uploading to database. It only supports csv at this stage and assumes first column is account
+ * second is description third is currency and forth is value. Appropriate value checkings are also
+ * implemented for value and currency columns. 
+ * 
+ */ 
 namespace Account_Info_Upload_Application
 {
     public class FileReader

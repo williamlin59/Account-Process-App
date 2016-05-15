@@ -8,6 +8,10 @@ using System.Configuration;
 using System.Data;
 using System.Threading;
 using System.ComponentModel;
+/* Database class is responsible for connecting to online or local database and insert transaction value 
+ * to correspond columns in sql db. A backgroundworker object is used to track the progress for progress bar.
+ * 
+ */ 
 namespace Account_Info_Upload_Application
 {
     public class Database

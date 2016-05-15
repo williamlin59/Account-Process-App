@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/* Factory class to hold all information for transaction
+ * getter, setter and toString
+ * 
+ */
 namespace Account_Info_Upload_Application
 {
     public class Transaction
