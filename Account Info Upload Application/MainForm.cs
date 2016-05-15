@@ -7,7 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/* This is the main program of the application playing a role as mediator. 
+ * A backgroundworkers are implemented for tracking the progress of reading and uploading
+ * data to database. Proper error handling are also being implemented.
+ * 
+ * 
+ */
 
 
 namespace Account_Info_Upload_Application
@@ -15,6 +20,12 @@ namespace Account_Info_Upload_Application
     public partial class MainForm : Form
     {
         private String filePath;
+        private const String READ_FILE = "Reading files...";
+        private const String UPLOAD_FILE = "Uploading files...";
+        private const String UNABLE_READ_FILE = "Error: Could not read file from disk. Original error: ";
+        private const String UNABLE_OPEN_FILE = "Unable to open file: ";
+        private const String COMPLETE = "Complete";
+        private const String UNABLE_CONNECT_DB = "Can't connect to database";
         private List<Transaction> transactions;
         public MainForm()
         {
@@ -36,7 +47,7 @@ namespace Account_Info_Upload_Application
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                    MessageBox.Show(UNABLE_READ_FILE + ex.Message);
                 }
             }
         }
@@ -46,15 +57,15 @@ namespace Account_Info_Upload_Application
  
             if (FileReader.check(filePath) == true)
             {
-                this.task.Text = "Reading files...";
+                this.task.Text = READ_FILE;
                 transactions = FileReader.read(filePath);
                 uploadProgressBar.Maximum = transactions.Count<=1?1:transactions.Count-1;
-                this.task.Text = "Updating data...";
+                this.task.Text = UPLOAD_FILE;
                 backgroundWorker1.RunWorkerAsync();
             }
             else
             {
-                MessageBox.Show("Unable to open file: " + filePath);
+                MessageBox.Show(UNABLE_OPEN_FILE + filePath);
             }
 
             
@@ -67,7 +78,7 @@ namespace Account_Info_Upload_Application
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            this.task.Text = "Complete";
+            this.task.Text = COMPLETE;
             int line = FileReader.getLine();
             MessageBox.Show("Total Read in : "+line+"\n"+ "Total Invalid Line : " +(line-transactions.Count));
         }
@@ -90,7 +101,7 @@ namespace Account_Info_Upload_Application
                 }
                 else
                 {
-                    MessageBox.Show("Can't connect to database");
+                    MessageBox.Show(UNABLE_CONNECT_DB);
                 }
         }
 
