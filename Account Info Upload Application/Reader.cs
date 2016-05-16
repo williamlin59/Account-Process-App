@@ -33,6 +33,7 @@ namespace Account_Info_Upload_Application
                 String[] parts = currentline.Split(new Char[] { ',', ';', '\t' });
                 double doubleValue;
                 HashSet<String> currencies = generateAllCurrencies();
+                //Assume first column is account, second is description, third is currency and forth is value
                 String account = parts[0].Replace(" ", String.Empty);
                 String description = parts[1].Replace(" ", String.Empty);
                 String currency = parts[2].Replace(" ", String.Empty);

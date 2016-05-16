@@ -88,7 +88,7 @@ namespace Account_Info_Upload_Application
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             uploadProgressBar.Value = e.ProgressPercentage;
-            decimal value = ((decimal)e.ProgressPercentage / (transactions.Count <=1 ? 1 : transactions.Count - 1)) * 100;
+            decimal value = ((decimal)e.ProgressPercentage / (transactions.Count <1 ? 1 : transactions.Count - 1)) * 100;
             
             percentage.Text = value.ToString("0.0") + "%";
              
